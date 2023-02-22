@@ -10,13 +10,13 @@ class Post(models.Model):
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='post.Post.author')
+        related_name='posts')
     group = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
         blank=True,
         null=True,
-        related_name='post.Post.group')
+        related_name='post')
 
 class Group(models.Model):
     title = models.CharField(max_length=200)
